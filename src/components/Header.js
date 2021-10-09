@@ -19,7 +19,7 @@ class Header extends React.Component {
         <Link key="Home" to="/">
           <img
             {...css(styles.terminal)}
-            src="/images/terminal.svg"
+            src="/images/white_logo.png"
             alt="Terminal"
           />
         </Link>
