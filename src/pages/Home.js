@@ -29,7 +29,7 @@ class Home extends React.Component {
     return (
       <div {...css(styles.container)}>
         <section {...css(styles.intro)}>
-          <Fade bottom cascade>
+          <Fade duration={1500} bottom cascade>
             <div {...css(styles.intro_text)}>
               <h1>DIGILUX</h1>
               <i><h3 {...css(styles.intro_text_h3)}>Where Luxury meets Future.</h3></i>
@@ -49,7 +49,7 @@ class Home extends React.Component {
           </Fade>
         </section>
         <section id="mission" {...css(styles.mission)}>
-          <Fade bottom cascade>
+          <Fade bottom>
             <div {...css(styles.mission_left)}>
               <h1>Our Mission</h1>
               <p>Digilux is the world's first digital luxury fashion brand, specializing in jewelry, watches, and accessories.
@@ -76,7 +76,7 @@ class Home extends React.Component {
             <p {...css(styles.digiring_sub_header)}>The DigiRing series is our first - and the first - digital ring collection within the metaverse.</p>
             <div {...css(styles.digiring_container)}>
               <div {...css(styles.digiring_left)}>
-                <Fade bottom cascade>
+                <Fade duration={2000} bottom cascade>
                   <h3>5 Band Types.</h3>
                   <h3>Over 20 Materials.</h3>
                   <h3>Dozens of Gems.</h3>
@@ -219,7 +219,8 @@ export default withStyles(({ color }) => ({
     margin: "auto",
     "@media (max-width: 1000px)": {
       fontSize: "18px",
-      width: "600px"
+      width: "500px",
+      padding: "15px"
     },
     "@media (max-width: 800px)": {
       width: "450px"

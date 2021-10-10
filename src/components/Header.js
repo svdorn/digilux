@@ -19,7 +19,7 @@ class Header extends React.Component {
       <nav {...css(styles.container)}>
         <a key="Home" to="/">
           <img
-            {...css(styles.terminal)}
+            {...css(styles.logo)}
             src="/images/white_logo.png"
             alt="Digilux"
           />
@@ -46,10 +46,15 @@ Header.propTypes = {
 
 export default withStyles(({ color }) => ({
   container: {
-    padding: "10px 20px 20px"
+    padding: "10px 20px 20px",
+    "@media (max-width: 000px)": {
+      fontSize: "18px",
+      width: "500px",
+      padding: "15px"
+    }
   },
 
-  terminal: {
+  logo: {
     display: "inline-block",
     float: "left",
     height: "50px"
@@ -76,6 +81,9 @@ export default withStyles(({ color }) => ({
     opacity: "0.6",
     ":hover": {
       opacity: "1"
+    },
+    "@media (max-width: 633px)": {
+      display: "none"
     }
   }
 }))(Header);
