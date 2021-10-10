@@ -1,17 +1,16 @@
 {
   "name": "digilux",
-  "homepage": "http://svdorn.github.io",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.3.1",
+    "aphrodite": "^2.4.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-reveal": "^1.2.2",
     "react-scripts": "3.0.1",
     "react-with-styles": "^3.2.3",
-    "react-with-styles-interface-aphrodite": "^5.0.1",
-    "recharts": "^2.1.2"
+    "react-with-styles-interface-aphrodite": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
