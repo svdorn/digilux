@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 import { css, withStyles } from "../withStyles";
 
 const icons = [
-  { name: "discord", href: "https://github.com/svdorn" },
-  { name: "twitter", href: "https://twitter.com/stphn_drn" }
+  { name: "discord", href: "https://discord.gg/qS2nnRdQ" },
+  { name: "twitter", href: "https://twitter.com/DigiluxNFT" }
 ];
 
 function Social({ styles }) {

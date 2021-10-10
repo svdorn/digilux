@@ -1,29 +1,27 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { css, withStyles } from "../withStyles";
-import SwipeableViews from "react-swipeable-views";
-import { autoPlay } from "react-swipeable-views-utils";
-import { Divider } from "@material-ui/core";
 import { Button } from "@material-ui/core";
 import Fade from 'react-reveal/Fade';
 
-const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
+const roadmapItems = [
+  { percentage: "10%", text: "Digilux is devoted to our community's success. To ensure that success, we'll provide opportunities for you to take part in our future collections, conversations, and exclusive events." },
+  { percentage: "20%", text: "After all 10,000 rings are minted, we will randomly select one DigiRing" }
+];
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
 
-    this.state = { 
-      imageStatus: "loading"
-    };
+    this.state = { };
   }
 
-  handleImageLoaded = () => {
-      this.setState({ imageStatus: "loaded" });
-  };
+  openInNewTab = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
+    if (newWindow) newWindow.opener = null
+  }
 
   render() {
-    const { imageStatus } = this.state;
     const { styles } = this.props;
 
     return (
@@ -38,11 +36,12 @@ class Home extends React.Component {
                 We provide time-honed {"&"} expertise-driven accessories as NFTs available to mint. 
               </p>
               <div {...css(styles.ring_background)}>
+                <a href="https://discord.gg/qS2nnRdQ" target="_blank">
                 <Button {...css(styles.discord_button)} >Join us on Discord <img
                   src="/images/social/discord.svg"
                   alt="discord"
                   {...css(styles.discord)}
-                /></Button>
+                /></Button></a>
                 <Button {...css(styles.disabled_button)} disabled>Mint</Button>
               </div>
             </div>
@@ -65,7 +64,7 @@ class Home extends React.Component {
               <img 
                 {...css(styles.mission_img)} 
                 src="/images/black_logo.png"
-                onLoad={this.handleImageLoaded.bind(this)}
+                alt="Digilux"
               />
             </div>
           </div>
@@ -84,13 +83,27 @@ class Home extends React.Component {
                 </Fade>
               </div>
               <div {...css(styles.digiring_right)}>
-                <img {...css(styles.digiring_image)} src="/images/five_rings.png" />
+                <img {...css(styles.digiring_image)} src="/images/five_rings.png" alt="DigiRings" />
               </div>
             </div>
           </Fade>
         </section>
         <section id="roadmap" {...css(styles.roadmap)}>
-          <div />
+          <h1 {...css(styles.roadmap_header)}>Roadmap</h1>
+          <p {...css(styles.roadmap_sub_header)}>Digilux is devoted to our community's success. 
+            To ensure that success, we'll provide opportunities for you to take part in our future collections, conversations, and exclusive events.</p>
+          <div {...css(styles.roadmap_container)}>
+            {roadmapItems.map(item => (
+              <a key={item.name} href={item.link} {...css(styles.menu_item)}>
+                {item.name}
+              </a>
+            ))}
+            <span {...css(styles.roadmap_dot)}>
+              <div {...css(styles.roadmap_dot_text)}>10%</div>
+              <p {...css(styles.roadmap_text)}>The public DigiRing mint will occur November 18, 2021. The whitelist mint will occur November 17, 2021.
+              200 randomly generated DigiRings will be reserved for marketing purposes and team distribution.</p>
+            </span>
+          </div>
         </section>
         <section id="mint" {...css(styles.mint)}>
             <Fade top>
@@ -325,6 +338,69 @@ export default withStyles(({ color }) => ({
     color: color.secondary,
     overflow: "auto",
     textAlign: "center"
+  },
+  roadmap_header: {
+    fontSize: "36px",
+    "@media (max-width: 1000px)": {
+      fontSize: "32px"
+    },
+    "@media (max-width: 500px)": {
+      fontSize: "28px"
+    }
+  },
+  roadmap_sub_header: {
+    margin: "-15px auto",
+    width: "650px",
+    "@media (max-width: 700px)": {
+      width: "450px"
+    },
+    "@media (max-width: 500px)": {
+      width: "90%"
+    }
+  },
+  roadmap_container: {
+    margin: "60px auto 0 auto"
+  },
+  roadmap_dot: {
+    height: "80px",
+    width: "80px",
+    display: "inline-block",
+    backgroundColor: color.gold,
+    borderRadius: "50%",
+    display: "inline-block",
+    "@media (max-width: 1000px)": {
+      height: "60px",
+      width: "60px"
+    },
+    "@media (max-width: 500px)": {
+      height: "50px",
+      width: "50px"
+    }
+  },
+  roadmap_dot_text: {
+    color: color.primary,
+    fontSize: "26px",
+    margin: "22px auto",
+    "@media (max-width: 1000px)": {
+      fontSize: "24px",
+      margin: "16px auto"
+    },
+    "@media (max-width: 500px)": {
+      fontSize: "20px",
+      margin: "12px auto"
+    }
+  },
+  roadmap_text: {
+    fontSize: "24px",
+    textAlign: "left",
+    display: "inline-block",
+    marginLeft: "20px",
+    "@media (max-width: 1000px)": {
+      fontSize: "22px",
+    },
+    "@media (max-width: 500px)": {
+      fontSize: "18px",
+    }
   },
   /* mint section styling */
   mint: {
