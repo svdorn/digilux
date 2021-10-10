@@ -49,7 +49,7 @@ class Home extends React.Component {
           </Fade>
         </section>
         <section id="mission" {...css(styles.mission)}>
-          <Fade bottom>
+          <div>
             <div {...css(styles.mission_left)}>
               <h1>Our Mission</h1>
               <p>Digilux is the world's first digital luxury fashion brand, specializing in jewelry, watches, and accessories.
@@ -68,15 +68,15 @@ class Home extends React.Component {
                 onLoad={this.handleImageLoaded.bind(this)}
               />
             </div>
-          </Fade>
+          </div>
         </section>
         <section id="digiring" {...css(styles.digiring)}>
-          <Fade bottom>
+          <Fade top>
             <h1 {...css(styles.digiring_header)}>The DigiRing</h1>
             <p {...css(styles.digiring_sub_header)}>The DigiRing series is our first - and the first - digital ring collection within the metaverse.</p>
             <div {...css(styles.digiring_container)}>
               <div {...css(styles.digiring_left)}>
-                <Fade duration={2000} bottom cascade>
+                <Fade duration={2500} top cascade>
                   <h3>5 Band Types.</h3>
                   <h3>Over 20 Materials.</h3>
                   <h3>Dozens of Gems.</h3>
