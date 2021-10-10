@@ -1,13 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
 import { css, withStyles } from "../withStyles";
 import Social from "./Social";
 
 const menuItems = [
-  { name: "About", link: "about" },
-  { name: "Traits", link: "traits" },
-  { name: "Roadmap", link: "roadmap" }
+  { name: "Mission", link: "#mission" },
+  { name: "DigiRing", link: "#digiring" },
+  { name: "Roadmap", link: "#roadmap" },
+  { name: "Mint", link: "#mint" },
+  { name: "Community", link: "#community" }
 ];
 
 class Header extends React.Component {
@@ -16,18 +17,18 @@ class Header extends React.Component {
 
     return (
       <nav {...css(styles.container)}>
-        <Link key="Home" to="/">
+        <a key="Home" to="/">
           <img
             {...css(styles.terminal)}
             src="/images/white_logo.png"
             alt="Digilux"
           />
-        </Link>
+        </a>
         <div {...css(styles.menu_items)}>
           {menuItems.map(item => (
-            <Link key={item.name} to={item.link} {...css(styles.menu_item)}>
+            <a key={item.name} href={item.link} {...css(styles.menu_item)}>
               {item.name}
-            </Link>
+            </a>
           ))}
           <div {...css(styles.social)}>
             <Social />

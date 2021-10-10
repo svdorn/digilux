@@ -48,7 +48,7 @@ class Home extends React.Component {
             </div>
           </Fade>
         </section>
-        <section {...css(styles.mission)}>
+        <section id="mission" {...css(styles.mission)}>
           <Fade bottom cascade>
             <div {...css(styles.mission_left)}>
               <h1>Our Mission</h1>
@@ -70,7 +70,7 @@ class Home extends React.Component {
             </div>
           </Fade>
         </section>
-        <section {...css(styles.digiring)}>
+        <section id="digiring" {...css(styles.digiring)}>
           <Fade bottom>
             <h1 {...css(styles.digiring_header)}>The DigiRing</h1>
             <p {...css(styles.digiring_sub_header)}>The DigiRing series is our first - and the first - digital ring collection within the metaverse.</p>
@@ -89,10 +89,13 @@ class Home extends React.Component {
             </div>
           </Fade>
         </section>
-        <section {...css(styles.roadmap)}>
+        <section id="roadmap" {...css(styles.roadmap)}>
           <div />
         </section>
-        <section {...css(styles.contact)}>
+        <section id="mint" {...css(styles.contact)}>
+          <div />
+        </section>
+        <section id="community" {...css(styles.contact)}>
           <div />
         </section>
       </div>
