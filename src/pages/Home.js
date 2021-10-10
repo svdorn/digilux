@@ -529,6 +529,10 @@ export default withStyles(({ color }) => ({
   },
   team_members_container: {
     padding: "40px 0",
+    margin: "auto",
+    "@media (max-width: 500px)": {
+      width: "90%",
+    }
   },
   team_member: {
     opacity: "0.5",
