@@ -16,6 +16,14 @@ const roadmapItems = [
   { percentage: "...", text: "Our continual missions are to take the collections to the Metaverses of the world. We intend to create special event mints to Digilux holders. Above all, we want to hear from our community members to hear what they want most to see from our team for the long term. There’s no brighter future than one where all of us shine." }
 ];
 
+const teamMembers = [
+  { title: "Visionary", name: "Nima1007", role: "Direction and Product Management" },
+  { title: "Artist", name: "Nosselli", role: "Visuals, Graphics, Renders" },
+  { title: "Technician", name: "stevej", role: "Web Dev, Smart Contracts" },
+  { title: "Jewelry Guru", name: "Subatomic_Orb", role: "Expert in the Finer Luxuries" },
+  { title: "Writer", name: "Alitheshaman", role: "Copy, Branding" }
+];
+
 class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -39,10 +47,10 @@ class Home extends React.Component {
               </p>
               <div {...css(styles.ring_background)}>
                 <a key="discord_button" href="https://discord.gg/qS2nnRdQ" target="_blank" rel="noopener noreferrer">
-                  <Button {...css(styles.discord_button)} >Join us on Discord <img
+                  <Button {...css(styles.discord_button)} >Join our Discord <img
                     src="/images/social/discord.svg"
                     alt="discord"
-                    {...css(styles.discord)}
+                    {...css(styles.social_icon)}
                   /></Button>
                 </a>
                 <Button {...css(styles.disabled_button)} disabled>Mint</Button>
@@ -127,6 +135,33 @@ class Home extends React.Component {
             </Fade>
         </section>
         <section id="community" {...css(styles.community)}>
+          <Fade top>
+            <h1 {...css(styles.community_header)}>Team</h1>
+            <p {...css(styles.community_sub_header)}>Driven by the love of blockchain technology and the finer things in life.</p>
+            <div {...css(styles.team_members_container)}>
+              {teamMembers.map(member => (
+                <div {...css(styles.team_member)}>
+                  {member.title} - {member.name} ({member.role})
+                </div>
+              ))}
+            </div>
+            <div>
+              <a key="discord_button_2" href="https://discord.gg/qS2nnRdQ" target="_blank" rel="noopener noreferrer">
+                <Button {...css(styles.social_button)} >Join our Discord <img
+                  src="/images/social/discord.svg"
+                  alt="discord-logo"
+                  {...css(styles.social_icon)}
+                /></Button>
+              </a>
+              <a key="twitter_button" href="https://twitter.com/DigiluxNFT" target="_blank" rel="noopener noreferrer">
+                <Button {...css(styles.social_button)} >Follow on Twitter <img
+                  src="/images/social/twitter.svg"
+                  alt="twitter-logo"
+                  {...css(styles.social_icon)}
+                /></Button>
+              </a>
+            </div>
+          </Fade>
           <div />
         </section>
       </div>
@@ -226,9 +261,9 @@ export default withStyles(({ color }) => ({
     height: "45px",
     width: "220px"
   },
-  discord: {
+  social_icon: {
     marginLeft: "5px",
-    height: "15px",
+    height: "10px",
     opacity: "0.95"
   },
   /* mission styling */
@@ -377,7 +412,10 @@ export default withStyles(({ color }) => ({
     float: "left"
   },
   roadmap_section: {
-    padding: "30px 20px"
+    padding: "40px 20px",
+    "@media (max-width: 500px)": {
+      padding: "30px 20px"
+    }
   },
   roadmap_dot: {
     height: "80px",
@@ -409,13 +447,13 @@ export default withStyles(({ color }) => ({
     }
   },
   roadmap_text: {
-    fontSize: "18px",
+    fontSize: "20px",
     textAlign: "left",
     display: "inline-block",
     margin: "auto 0 auto 20px",
     width: "75%",
     "@media (max-width: 1000px)": {
-      fontSize: "16px",
+      fontSize: "18px",
     },
     "@media (max-width: 500px)": {
       fontSize: "14px",
@@ -464,7 +502,52 @@ export default withStyles(({ color }) => ({
   },
   /* community section styling */
   community: {
-    padding: "20px 0 60px 0",
-    overflow: "auto"
+    padding: "60px 0",
+    overflow: "auto",
+    backgroundColor: color.secondary,
+    color: color.primary
+  },
+  community_header: {
+    fontSize: "36px",
+    "@media (max-width: 1000px)": {
+      fontSize: "32px"
+    },
+    "@media (max-width: 500px)": {
+      fontSize: "28px"
+    }
+  },
+  community_sub_header: {
+    margin: "-15px auto",
+    fontSize: "18px",
+    "@media (max-width: 1000px)": {
+      fontSize: "16px"
+    },
+    "@media (max-width: 500px)": {
+      width: "90%",
+      fontSize: "14px"
+    }
+  },
+  team_members_container: {
+    padding: "40px 0",
+  },
+  team_member: {
+    opacity: "0.5",
+    margin: "10px auto",
+    fontSize: "20px",
+    "@media (max-width: 1000px)": {
+      fontSize: "18px"
+    },
+    "@media (max-width: 500px)": {
+      fontSize: "14px"
+    }
+  },
+  social_button: {
+    display: "inline-block",
+    padding: "8px",
+    margin: "15px",
+    backgroundColor: color.gold,
+    color: color.white,
+    height: "45px",
+    width: "220px"
   }
 }))(Home);

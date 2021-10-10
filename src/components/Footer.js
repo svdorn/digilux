@@ -25,7 +25,7 @@ Footer.propTypes = {
 
 export default withStyles(({ color }) => ({
   container: {
-    height: "130px",
+    height: "140px",
     backgroundColor: color.primary,
     textAlign: "center"
   },
