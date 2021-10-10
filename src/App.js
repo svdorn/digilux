@@ -26,7 +26,7 @@ App.propTypes = {
 export default withStyles(({ color }) => ({
   container: {
     textAlign: "center",
-    padding: "50px 0",
+    padding: "50px 0 0 0",
     font: "15px intercom-text,system-ui",
     scrollBehavior: "smooth"
   },
