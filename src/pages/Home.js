@@ -49,10 +49,9 @@ class Home extends React.Component {
           </Fade>
         </section>
         <section {...css(styles.mission)}>
-          <div>
           <Fade bottom cascade>
             <div {...css(styles.mission_left)}>
-              <h2>Our Mission</h2>
+              <h1>Our Mission</h1>
               <p>Digilux is the world's first digital luxury fashion brand, specializing in jewelry, watches, and accessories.
                 Rarity and exclusivity are prioritized for each collection, allowing collectors to gain wealth while they shop.
                 <br /><br />
@@ -70,12 +69,27 @@ class Home extends React.Component {
               />
             </div>
           </Fade>
-          </div>
         </section>
-        <section {...css(styles.tech)}>
-          <div />
+        <section {...css(styles.digiring)}>
+          <Fade bottom>
+            <h1 {...css(styles.digiring_header)}>The DigiRing</h1>
+            <p {...css(styles.digiring_sub_header)}>The DigiRing series is our first - and the first - digital ring collection within the metaverse.</p>
+            <div {...css(styles.digiring_container)}>
+              <div {...css(styles.digiring_left)}>
+                <Fade bottom cascade>
+                  <h3>5 Band Types.</h3>
+                  <h3>Over 20 Materials.</h3>
+                  <h3>Dozens of Gems.</h3>
+                  <h3><b>10,000 Unique Rings.</b></h3>
+                </Fade>
+              </div>
+              <div {...css(styles.digiring_right)}>
+                <img {...css(styles.digiring_image)} src="/images/five_rings.png" />
+              </div>
+            </div>
+          </Fade>
         </section>
-        <section {...css(styles.investing)}>
+        <section {...css(styles.roadmap)}>
           <div />
         </section>
         <section {...css(styles.contact)}>
@@ -110,15 +124,15 @@ export default withStyles(({ color }) => ({
     }
   },
   intro_text: {
-    fontWeight: "700px",
-    fontSize: "30px",
-    marginTop: "-30px",
+    fontWeight: "800px",
+    fontSize: "32px",
+    margin: "-30px auto",
     maxWidth: "95%",
     "@media (max-width: 1000px)": {
-      fontSize: "32px"
+      fontSize: "30px"
     },
     "@media (max-width: 500px)": {
-      fontSize: "25px"
+      fontSize: "26px"
     }
   },
   intro_text_h3: {
@@ -227,16 +241,74 @@ export default withStyles(({ color }) => ({
     }
   },
   /* tech section styling */
-  tech: {
-    padding: "50px 0 60px",
-    backgroundColor: color.primary,
-    color: color.primary,
-    overflow: "auto"
+  digiring: {
+    padding: "60px 0",
+    backgroundColor: color.gray,
+    color: color.black,
+    overflow: "auto",
+    textAlign: "center",
+    fontWeight: "800px"
+  },
+  digiring_header: {
+    fontSize: "36px",
+    "@media (max-width: 1000px)": {
+      fontSize: "32px"
+    },
+    "@media (max-width: 500px)": {
+      fontSize: "28px"
+    }
+  },
+  digiring_sub_header: {
+    marginTop: "-20px",
+    "@media (max-width: 500px)": {
+      width: "90%"
+    }
+  },
+  digiring_container: {
+    paddingTop: "30px"
+  },
+  digiring_left: {
+    display: "inline-block",
+    margin: "auto",
+    fontSize: "26px",
+    textAlign: "left",
+    "@media (max-width: 1000px)": {
+      width: "300px",
+      fontSize: "22px"
+    },
+    "@media (max-width: 500px)": {
+      width: "90%",
+      fontSize: "20px",
+      textAlign: "center"
+    }
+  },
+  digiring_right: {
+    display: "inline-block",
+    padding: "0 0 0 20px",
+    margin: "auto",
+    "@media (max-width: 500px)": {
+      padding: "0",
+    }
+  },
+  digiring_image: {
+    width: "700px",
+    "@media (max-width: 1200px)": {
+      width: "600px",
+    },
+    "@media (max-width: 1000px)": {
+      width: "400px",
+    },
+    "@media (max-width: 500px)": {
+      width: "90%",
+    }
   },
   /* investing section styling */
-  investing: {
+  roadmap: {
     padding: "60px 0",
-    overflow: "auto"
+    backgroundColor: color.primary,
+    color: color.secondary,
+    overflow: "auto",
+    textAlign: "center"
   },
   /* contact section styling */
   contact: {

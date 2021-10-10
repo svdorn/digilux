@@ -20,7 +20,7 @@ class Header extends React.Component {
           <img
             {...css(styles.terminal)}
             src="/images/white_logo.png"
-            alt="Terminal"
+            alt="Digilux"
           />
         </Link>
         <div {...css(styles.menu_items)}>

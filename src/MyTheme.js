@@ -2,9 +2,9 @@ export default {
   color: {
     primary: "#000000",
     secondary: "#FFFAFA",
-    black: "##212529",
+    black: "#000000",
     white: "#FFFAFA",
     gold: "#d4af37",
-    gray: "#C4C4C4"
+    gray: "#F2F2F2"
   }
 };
