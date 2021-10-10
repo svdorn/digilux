@@ -17,13 +17,11 @@ class Header extends React.Component {
 
     return (
       <nav {...css(styles.container)}>
-        <a key="Home" to="/">
-          <img
-            {...css(styles.logo)}
-            src="/images/white_logo.png"
-            alt="Digilux"
-          />
-        </a>
+        <img
+          {...css(styles.logo)}
+          src="/images/white_logo.png"
+          alt="Digilux"
+        />
         <div {...css(styles.menu_items)}>
           {menuItems.map(item => (
             <a key={item.name} href={item.link} {...css(styles.menu_item)}>

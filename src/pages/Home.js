@@ -5,8 +5,15 @@ import { Button } from "@material-ui/core";
 import Fade from 'react-reveal/Fade';
 
 const roadmapItems = [
-  { percentage: "10%", text: "Digilux is devoted to our community's success. To ensure that success, we'll provide opportunities for you to take part in our future collections, conversations, and exclusive events." },
-  { percentage: "20%", text: "After all 10,000 rings are minted, we will randomly select one DigiRing" }
+  { percentage: "10%", text: "The public DigiRing mint will occur November 18, 2021. The whitelist mint will occur November 17, 2021. 200 randomly generated DigiRings will be reserved for marketing purposes and team distribution." },
+  { percentage: "20%", text: "After all 10,000 rings are minted, we will randomly select one DigiRing holder to win a designer brand ring of their choosing, with a cap of a $10,000 cost. You also get direct access to our jewelry guru to help you pick out your ring." },
+  { percentage: "40%", text: "To jump-start our community growth, we’re going to set up a $30,000 Community Fund dedicated to rewarding members for content creation, increased utility for Digilux NFTs, and other efforts that could recieve funds from the Digilux team. We also will perpetually fill the Community Fund with 2.5% of OpenSea sales." },
+  { percentage: "50%", text: "Digilux will release The Showroom - an interactive experience on the Digilux site. Each ring will have their unique story displayed in the showroom for he public to appreciate. Moreover, we will release the Digilux Storefront, where you can get custom jewelry inspired by your favorite Digilux NFTs." },
+  { percentage: "70%", text: "After the success of the DigiRing collection, we will move to the public mint of the DigiWatch collection. DigiRing holders will be whitelisted for the drop." },
+  { percentage: "80%", text: "After all 10,000 watches are minted, we will randomly select one DigiWatch holder to win a designer brand watch of their choosing, with a cap of a $50,000 cost. You also get direct access to our jewelry guru to help you pick out your watch." },
+  { percentage: "90%", text: "After the success of the DigiWatch collection, we will move to the public mint of the DigiNecklace collection. DigiWatch holders will be whitelisted for the drop." },
+  { percentage: "100%", text: "After all 10,000 necklaces are minted, we will randomly select one DigiNecklace holder to win a designer necklace of their choosing, with a cap of a $20,000 cost. You also get direct access to our jewelry guru to help you pick out your necklace." },
+  { percentage: "...", text: "Our continual missions are to take the collections to the Metaverses of the world. We intend to create special event mints to Digilux holders. Above all, we want to hear from our community members to hear what they want most to see from our team for the long term. There’s no brighter future than one where all of us shine." }
 ];
 
 class Home extends React.Component {
@@ -14,11 +21,6 @@ class Home extends React.Component {
     super(props);
 
     this.state = { };
-  }
-
-  openInNewTab = (url) => {
-    const newWindow = window.open(url, '_blank', 'noopener,noreferrer')
-    if (newWindow) newWindow.opener = null
   }
 
   render() {
@@ -36,12 +38,13 @@ class Home extends React.Component {
                 We provide time-honed {"&"} expertise-driven accessories as NFTs available to mint. 
               </p>
               <div {...css(styles.ring_background)}>
-                <a href="https://discord.gg/qS2nnRdQ" target="_blank">
-                <Button {...css(styles.discord_button)} >Join us on Discord <img
-                  src="/images/social/discord.svg"
-                  alt="discord"
-                  {...css(styles.discord)}
-                /></Button></a>
+                <a key="discord_button" href="https://discord.gg/qS2nnRdQ" target="_blank" rel="noopener noreferrer">
+                  <Button {...css(styles.discord_button)} >Join us on Discord <img
+                    src="/images/social/discord.svg"
+                    alt="discord"
+                    {...css(styles.discord)}
+                  /></Button>
+                </a>
                 <Button {...css(styles.disabled_button)} disabled>Mint</Button>
               </div>
             </div>
@@ -89,21 +92,24 @@ class Home extends React.Component {
           </Fade>
         </section>
         <section id="roadmap" {...css(styles.roadmap)}>
-          <h1 {...css(styles.roadmap_header)}>Roadmap</h1>
-          <p {...css(styles.roadmap_sub_header)}>Digilux is devoted to our community's success. 
-            To ensure that success, we'll provide opportunities for you to take part in our future collections, conversations, and exclusive events.</p>
-          <div {...css(styles.roadmap_container)}>
-            {roadmapItems.map(item => (
-              <a key={item.name} href={item.link} {...css(styles.menu_item)}>
-                {item.name}
-              </a>
-            ))}
-            <span {...css(styles.roadmap_dot)}>
-              <div {...css(styles.roadmap_dot_text)}>10%</div>
-              <p {...css(styles.roadmap_text)}>The public DigiRing mint will occur November 18, 2021. The whitelist mint will occur November 17, 2021.
-              200 randomly generated DigiRings will be reserved for marketing purposes and team distribution.</p>
-            </span>
-          </div>
+          <Fade top>
+            <h1 {...css(styles.roadmap_header)}>Roadmap</h1>
+            <p {...css(styles.roadmap_sub_header)}>Digilux is devoted to our community's success. 
+              To ensure that success, we'll provide opportunities for you to take part in our future collections, conversations, and exclusive events.</p>
+            <div {...css(styles.roadmap_container)}>
+              {roadmapItems.map(item => (
+                <div {...css(styles.roadmap_section_container)}>
+                  <div {...css(styles.roadmap_section)}>
+                    <span key={item.percentage} {...css(styles.roadmap_dot)}>
+                      <div {...css(styles.roadmap_dot_text)}>{item.percentage}</div>
+                    </span>
+                    <p {...css(styles.roadmap_text)}>{item.text}</p>
+                  </div>
+                  <div {...css(styles.roadmap_divider)} />
+                </div>
+              ))}
+            </div>
+          </Fade>
         </section>
         <section id="mint" {...css(styles.mint)}>
             <Fade top>
@@ -349,17 +355,29 @@ export default withStyles(({ color }) => ({
     }
   },
   roadmap_sub_header: {
+    fontSize: "18px",
     margin: "-15px auto",
     width: "650px",
     "@media (max-width: 700px)": {
-      width: "450px"
+      width: "450px",
+      fontSize: "16px"
     },
     "@media (max-width: 500px)": {
-      width: "90%"
+      width: "90%",
+      fontSize: "14px"
     }
   },
   roadmap_container: {
-    margin: "60px auto 0 auto"
+    margin: "50px auto 0 auto",
+    width: "95%"
+  },
+  roadmap_section_container: {
+    width: "95%",
+    margin: "auto",
+    float: "left"
+  },
+  roadmap_section: {
+    padding: "30px 20px"
   },
   roadmap_dot: {
     height: "80px",
@@ -367,7 +385,7 @@ export default withStyles(({ color }) => ({
     display: "inline-block",
     backgroundColor: color.gold,
     borderRadius: "50%",
-    display: "inline-block",
+    verticalAlign: "top",
     "@media (max-width: 1000px)": {
       height: "60px",
       width: "60px"
@@ -391,16 +409,27 @@ export default withStyles(({ color }) => ({
     }
   },
   roadmap_text: {
-    fontSize: "24px",
+    fontSize: "18px",
     textAlign: "left",
     display: "inline-block",
-    marginLeft: "20px",
+    margin: "auto 0 auto 20px",
+    width: "75%",
     "@media (max-width: 1000px)": {
-      fontSize: "22px",
+      fontSize: "16px",
     },
     "@media (max-width: 500px)": {
-      fontSize: "18px",
+      fontSize: "14px",
     }
+  },
+  roadmap_divider: {
+      display: "block",
+      height: "1px",
+      border: "0",
+      borderTop: "1px solid #ffffff",
+      opacity: "0.5",
+      margin: "1em auto",
+      padding: "0",
+      width: "60%"
   },
   /* mint section styling */
   mint: {
