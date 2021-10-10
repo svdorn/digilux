@@ -92,10 +92,22 @@ class Home extends React.Component {
         <section id="roadmap" {...css(styles.roadmap)}>
           <div />
         </section>
-        <section id="mint" {...css(styles.contact)}>
-          <div />
+        <section id="mint" {...css(styles.mint)}>
+            <Fade top>
+              <h1 {...css(styles.mint_header)}>Minting</h1>
+              <p {...css(styles.mint_sub_header)}>Every major collection from Digilux will include 10,000 items, and mint prices will be 0.065 ETH.
+              <br/><br/>All DigiRings will be revealed once minting is complete.
+              </p>
+              <div {...css(styles.mint_schedule)}>
+                <h2>Schedule</h2>
+                <h3>11/17/2021: 12:00am-11:59pm</h3>
+                <p {...css(styles.mint_p)}>DigiRings White List Mint</p>
+                <h3>11/18/2021: 12:00am - 11:59pm</h3>
+                <p {...css(styles.mint_p)}>DigiRings Public Mint</p>
+              </div>
+            </Fade>
         </section>
-        <section id="community" {...css(styles.contact)}>
+        <section id="community" {...css(styles.community)}>
           <div />
         </section>
       </div>
@@ -263,7 +275,7 @@ export default withStyles(({ color }) => ({
     }
   },
   digiring_sub_header: {
-    marginTop: "-20px",
+    margin: "-20px auto",
     "@media (max-width: 500px)": {
       width: "90%"
     }
@@ -306,7 +318,7 @@ export default withStyles(({ color }) => ({
       width: "90%",
     }
   },
-  /* investing section styling */
+  /* roadmap section styling */
   roadmap: {
     padding: "60px 0",
     backgroundColor: color.primary,
@@ -314,8 +326,39 @@ export default withStyles(({ color }) => ({
     overflow: "auto",
     textAlign: "center"
   },
-  /* contact section styling */
-  contact: {
+  /* mint section styling */
+  mint: {
+    padding: "60px 0",
+    backgroundColor: color.gray,
+    color: color.primary,
+    overflow: "auto",
+    textAlign: "center"
+  },
+  mint_header: {
+    fontSize: "36px",
+    "@media (max-width: 1000px)": {
+      fontSize: "32px"
+    },
+    "@media (max-width: 500px)": {
+      fontSize: "28px"
+    }
+  },
+  mint_sub_header: {
+    margin: "-15px auto",
+    width: "420px",
+    "@media (max-width: 500px)": {
+      width: "90%"
+    }
+  },
+  mint_schedule: {
+    margin: "40px auto",
+  },
+  mint_p: {
+    opacity: "0.4",
+    marginTop: "5px"
+  },
+  /* community section styling */
+  community: {
     padding: "20px 0 60px 0",
     overflow: "auto"
   }
