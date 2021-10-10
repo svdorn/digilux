@@ -5,15 +5,15 @@ import { Button } from "@material-ui/core";
 import Fade from 'react-reveal/Fade';
 
 const roadmapItems = [
-  { percentage: "10%", text: "The public DigiRing mint will occur November 18, 2021. The whitelist mint will occur November 17, 2021. 200 randomly generated DigiRings will be reserved for marketing purposes and team distribution." },
-  { percentage: "20%", text: "After all 10,000 rings are minted, we will randomly select one DigiRing holder to win a designer brand ring of their choosing, with a cap of a $10,000 cost. You also get direct access to our jewelry guru to help you pick out your ring." },
-  { percentage: "40%", text: "To jump-start our community growth, we’re going to set up a $30,000 Community Fund dedicated to rewarding members for content creation, increased utility for Digilux NFTs, and other efforts that could recieve funds from the Digilux team. We also will perpetually fill the Community Fund with 2.5% of OpenSea sales." },
-  { percentage: "50%", text: "Digilux will release The Showroom - an interactive experience on the Digilux site. Each ring will have their unique story displayed in the showroom for he public to appreciate. Moreover, we will release the Digilux Storefront, where you can get custom jewelry inspired by your favorite Digilux NFTs." },
+  { percentage: "10%", text: "The public DigiRing mint will take place November 18, 2021. The whitelist mint will take place November 17, 2021. 200 randomly generated DigiRings will be reserved for marketing purposes and team distribution." },
+  { percentage: "20%", text: "After all 10,000 rings are minted, we will randomly select one DigiRing holder to win a designer brand ring of their choosing, with a cap cost of $10,000. You also get direct access to our jewelry guru to help you pick out your ring." },
+  { percentage: "40%", text: "To jump-start our community growth, we’re going to set up a $30,000 Community Fund dedicated to rewarding members for content creation, increased utility for Digilux NFTs, and other efforts that could receive funds from the Digilux team. We also will perpetually fill the Community Fund with 2.5% of OpenSea sales." },
+  { percentage: "50%", text: "Digilux will release The Showroom - an interactive experience on the Digilux site. Each ring will have their unique story displayed in the showroom for DigiRing holders to appreciate. Moreover, we will release the Digilux Storefront, where you can get custom jewelry inspired by your favorite Digilux NFTs." },
   { percentage: "70%", text: "After the success of the DigiRing collection, we will move to the public mint of the DigiWatch collection. DigiRing holders will be whitelisted for the drop." },
-  { percentage: "80%", text: "After all 10,000 watches are minted, we will randomly select one DigiWatch holder to win a designer brand watch of their choosing, with a cap of a $50,000 cost. You also get direct access to our jewelry guru to help you pick out your watch." },
+  { percentage: "80%", text: "After all 10,000 watches are minted, we will randomly select one DigiWatch holder to win a designer brand watch of their choosing, with a cap cost of $50,000. You also get direct access to our jewelry guru to help you pick out your watch." },
   { percentage: "90%", text: "After the success of the DigiWatch collection, we will move to the public mint of the DigiNecklace collection. DigiWatch holders will be whitelisted for the drop." },
-  { percentage: "100%", text: "After all 10,000 necklaces are minted, we will randomly select one DigiNecklace holder to win a designer necklace of their choosing, with a cap of a $20,000 cost. You also get direct access to our jewelry guru to help you pick out your necklace." },
-  { percentage: "...", text: "Our continual missions are to take the collections to the Metaverses of the world. We intend to create special event mints to Digilux holders. Above all, we want to hear from our community members to hear what they want most to see from our team for the long term. There’s no brighter future than one where all of us shine." }
+  { percentage: "100%", text: "After all 10,000 necklaces are minted, we will randomly select one DigiNecklace holder to win a designer necklace of their choosing, with a cap cost of $20,000. You also get direct access to our jewelry guru to help you pick out your necklace." },
+  { percentage: "...", text: "Our continual missions are to take the collections to the Metaverses of the world. We intend to create special event mints for Digilux holders. Above all, we want to learn what our community members would like to see in the long term. There’s no brighter future than one where we all shine." }
 ];
 
 const teamMembers = [
@@ -21,7 +21,8 @@ const teamMembers = [
   { title: "Artist", name: "Nosselli", role: "Visuals, Graphics, Renders" },
   { title: "Technician", name: "stevej", role: "Web Dev, Smart Contracts" },
   { title: "Jewelry Guru", name: "Subatomic_Orb", role: "Expert in the Finer Luxuries" },
-  { title: "Writer", name: "Alitheshaman", role: "Copy, Branding" }
+  { title: "Writer", name: "Alitheshaman", role: "Copy, Branding" },
+  { title: "Mod Master", name: "eRac", role: "All Things Discord"}
 ];
 
 class Home extends React.Component {
@@ -122,7 +123,7 @@ class Home extends React.Component {
         <section id="mint" {...css(styles.mint)}>
             <Fade top>
               <h1 {...css(styles.mint_header)}>Minting</h1>
-              <p {...css(styles.mint_sub_header)}>Every major collection from Digilux will include 10,000 items, and mint prices will be 0.065 ETH.
+              <p {...css(styles.mint_sub_header)}>Every major collection from Digilux will include 10,000 items. Mint prices will be 0.065 ETH.
               <br/><br/>All DigiRings will be revealed once minting is complete.
               </p>
               <div {...css(styles.mint_schedule)}>
