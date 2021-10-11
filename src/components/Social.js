@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { css, withStyles } from "../withStyles";
 
 const icons = [
-  { name: "discord", href: "https://discord.gg/qS2nnRdQ" },
+  { name: "discord", href: "https://discord.gg/zgdbrSSMf5" },
   { name: "twitter", href: "https://twitter.com/DigiluxNFT" }
 ];
 
