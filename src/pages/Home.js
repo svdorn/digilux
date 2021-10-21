@@ -128,9 +128,9 @@ class Home extends React.Component {
               </p>
               <div {...css(styles.mint_schedule)}>
                 <h2>Schedule</h2>
-                <h3>11/17/2021: 12:00am-11:59pm</h3>
+                <h3>To Be Announced</h3>
                 <p {...css(styles.mint_p)}>DigiRings White List Mint</p>
-                <h3>11/18/2021: 12:00am - 11:59pm</h3>
+                <h3>To Be Announced</h3>
                 <p {...css(styles.mint_p)}>DigiRings Public Mint</p>
               </div>
             </Fade>
