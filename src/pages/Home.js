@@ -5,7 +5,7 @@ import { Button } from "@material-ui/core";
 import Fade from 'react-reveal/Fade';
 
 const roadmapItems = [
-  { percentage: "10%", text: "The public DigiRing mint will take place November 18, 2021. The whitelist mint will take place November 17, 2021. 200 randomly generated DigiRings will be reserved for marketing purposes and team distribution." },
+  { percentage: "10%", text: "The public DigiRing mint date is TBA. The whitelist mint will take place before the public mint. 200 randomly generated DigiRings will be reserved for marketing purposes and team distribution." },
   { percentage: "20%", text: "After all 10,000 rings are minted, we will randomly select one DigiRing holder to win a designer brand ring of their choosing, with a cap cost of $10,000. You also get direct access to our jewelry guru to help you pick out your ring." },
   { percentage: "40%", text: "To jump-start our community growth, we’re going to set up a $30,000 Community Fund dedicated to rewarding members for content creation, increased utility for Digilux NFTs, and other efforts that could receive funds from the Digilux team. We also will perpetually fill the Community Fund with 2.5% of OpenSea sales." },
   { percentage: "50%", text: "Digilux will release The Showroom - an interactive experience on the Digilux site. Each ring will have their unique story displayed in the showroom for DigiRing holders to appreciate. Moreover, we will release the Digilux Storefront, where you can get custom jewelry inspired by your favorite Digilux NFTs." },
