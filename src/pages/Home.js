@@ -75,7 +75,7 @@ class Home extends React.Component {
             <div {...css(styles.mission_right)}>
               <img 
                 {...css(styles.mission_img)} 
-                src="/images/black_logo.png"
+                src="/images/black_logo_green.png"
                 alt="Digilux"
               />
             </div>
