@@ -51,7 +51,7 @@ class Home extends React.Component {
                 We provide time-honed {"&"} expertise-driven accessories as NFTs available to mint. 
               </p>
               <div {...css(styles.ring_background)}>
-                <a key="discord_button" href="https://discord.gg/qS2nnRdQ" target="_blank" rel="noopener noreferrer">
+                <a key="discord_button" href="https://discord.gg/zgdbrSSMf5" target="_blank" rel="noopener noreferrer">
                   <Button {...css(styles.discord_button)} >Join our Discord <img
                     src="/images/social/discord.svg"
                     alt="discord"
@@ -151,7 +151,7 @@ class Home extends React.Component {
               ))}
             </div>
             <div>
-              <a key="discord_button_2" href="https://discord.gg/qS2nnRdQ" target="_blank" rel="noopener noreferrer">
+              <a key="discord_button_2" href="https://discord.gg/zgdbrSSMf5" target="_blank" rel="noopener noreferrer">
                 <Button {...css(styles.social_button)} >Join our Discord <img
                   src="/images/social/discord.svg"
                   alt="discord-logo"
