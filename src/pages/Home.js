@@ -22,7 +22,8 @@ const teamMembers = [
   { title: "Technician", name: "stevej", role: "Web Dev, Smart Contracts" },
   { title: "Jewelry Guru", name: "Subatomic_Orb", role: "Expert in the Finer Luxuries" },
   { title: "Writer", name: "Alitheshaman", role: "Copy, Branding" },
-  { title: "Mod Master", name: "eRac", role: "All Things Discord"}
+  { title: "Mod Master", name: "eRac", role: "All Things Discord"},
+  { title: "Content King", name: "Bubba", role: "Marketing, Video" }
 ];
 
 class Home extends React.Component {
