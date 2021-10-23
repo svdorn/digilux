@@ -13,7 +13,7 @@ const roadmapItems = [
   { percentage: "80%", text: "After 10,000 watches are minted, a DigiWatch holder will be randomly selected to win a free ring of their choice. Cost of this watch caps at $50k. Winner will get direct access to our jewelry guru to help pick out a watch." },
   { percentage: "90%", text: "After the success of DigiWatch collection, we’ll move on to our DigiNecklace collection. DigiWatch holders will be whitelisted." },
   { percentage: "100%", text: "After 10,000 necklaces are minted, a randomly selected DigiNecklace holder will win a designer necklace of their choosing, with a cap cost of $20,000. They’ll get direct access to our jewelry guru to help you pick a necklace." },
-  { percentage: "...", text: "We won’t stop still Digilux is apart of all the metaverses out there. In the meantime, there will be plenty of special event mints, Q&A/AMA discussions, and collaborations to look forward too." }
+  { percentage: "...", text: "We won’t stop still Digilux is apart of all the metaverses out there. In the meantime, there will be plenty of special event mints, Q&A/AMA discussions, and collaborations to look forward to." }
 ];
 
 const teamMembers = [
@@ -236,7 +236,7 @@ export default withStyles(({ color }) => ({
   ring_background: {
     height: "calc(20vh)",
     minHeight: "300px",
-    background: "url(/images/Intro_Gold_Ring.png)",
+    background: "url(/images/Single_Gold_Ring.png)",
     backgroundSize: "fixed",
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
