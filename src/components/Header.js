@@ -19,7 +19,7 @@ class Header extends React.Component {
       <nav {...css(styles.container)}>
         <img
           {...css(styles.logo)}
-          src="/images/white_logo_green.png"
+          src="/images/logo_white.png"
           alt="Digilux"
         />
         <div {...css(styles.menu_items)}>
