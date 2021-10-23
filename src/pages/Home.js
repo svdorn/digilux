@@ -5,15 +5,15 @@ import { Button } from "@material-ui/core";
 import Fade from 'react-reveal/Fade';
 
 const roadmapItems = [
-  { percentage: "10%", text: "The first public DigiRing mint TBA." },
+  { percentage: "10%", text: "The first public DigiRing mint TBA. The first 200 people to join the Digilux discord will be whitelisted." },
   { percentage: "20%", text: "After 10,000 rings are minted, a DigiRing holder will be randomly selected to win a free ring of their choice. Cost of this ring caps at $10,000. Winner gets direct access to our Diamond Council of America certified jewelry expert to find the perfect ring for you." },
   { percentage: "40%", text: "A $30,000 Community Fund will launch to reward content creation, increase Digilux NFT utility, and spark community growth. 2.5 percent of OpenSea sales will go to this fund." },
   { percentage: "50%", text: "We’re launching two very cool parts of our site: The Showroom and The Storefront. The Showroom will display each ring, their history. The Storefront will allow you to get custom jewelry inspired by your favorite Digilux NFTs." },
   { percentage: "70%", text: "DigiRing holders will be whitelisted for our next drop - the DigiWatch. The DigiWatch collection mint will happen shortly after the whitelisting." },
-  { percentage: "80%", text: "After 10,000 watches are minted, a DigiWatch holder will be randomly selected to win a free ring of their choice. Cost of this watch caps at $50k. Winner will get direct access to our jewelry guru to help pick out a watch." },
+  { percentage: "80%", text: "After 10,000 watches are minted, a DigiWatch holder will be randomly selected to win a free ring of their choice. Cost of this watch caps at $50,000. Winner will get direct access to our jewelry guru to help pick out a watch." },
   { percentage: "90%", text: "After the success of DigiWatch collection, we’ll move on to our DigiNecklace collection. DigiWatch holders will be whitelisted." },
   { percentage: "100%", text: "After 10,000 necklaces are minted, a randomly selected DigiNecklace holder will win a designer necklace of their choosing, with a cap cost of $20,000. They’ll get direct access to our jewelry guru to help you pick a necklace." },
-  { percentage: "...", text: "We won’t stop still Digilux is apart of all the metaverses out there. In the meantime, there will be plenty of special event mints, Q&A/AMA discussions, and collaborations to look forward to." }
+  { percentage: "...", text: "We won’t stop until Digilux is apart of all the metaverses out there. In the meantime, there will be plenty of special event mints, Q&A/AMA discussions, and collaborations to look forward to." }
 ];
 
 const teamMembers = [
