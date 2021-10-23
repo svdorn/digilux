@@ -66,7 +66,7 @@ class Home extends React.Component {
         <section id="mission" {...css(styles.mission)}>
           <div>
             <div {...css(styles.mission_left)}>
-              <h1>Our Mission</h1>
+              <h1 {...css(styles.header)}>Our Mission</h1>
               <p>Digilux is the world's first digital luxury fashion brand, specializing in jewelry, watches, and accessories.
                 Rarity and exclusivity are prioritized for each collection, allowing collectors to gain wealth while they shop.
                 <br /><br />
@@ -141,7 +141,7 @@ class Home extends React.Component {
         </section>
         <section id="community" {...css(styles.community)}>
           <Fade top>
-            <h1 {...css(styles.community_header)}>Team</h1>
+            <h1 {...css(styles.header)}>Team</h1>
             <p {...css(styles.community_sub_header)}>Driven by the love of blockchain technology and the finer things in life.</p>
             <div {...css(styles.team_members_container)}>
               {teamMembers.map(member => (
@@ -199,14 +199,14 @@ export default withStyles(({ color }) => ({
     }
   },
   intro_logo: {
-    height: "160px",
+    height: "150px",
     margin: "40px auto 0 auto",
     display: "block",
     "@media (max-width: 1000px)": {
       height: "120px"
     },
     "@media (max-width: 500px)": {
-      height: "100px"
+      height: "90px"
     }
   },
   intro_text: {
@@ -512,7 +512,7 @@ export default withStyles(({ color }) => ({
     backgroundColor: color.secondary,
     color: color.primary
   },
-  community_header: {
+  header: {
     fontSize: "36px",
     "@media (max-width: 1000px)": {
       fontSize: "32px"
