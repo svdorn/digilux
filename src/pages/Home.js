@@ -95,7 +95,7 @@ class Home extends React.Component {
                 </Fade>
               </div>
               <div {...css(styles.digiring_right)}>
-                <img {...css(styles.digiring_image)} src="/images/five_rings.png" alt="DigiRings" />
+                <img {...css(styles.digiring_image)} src="/images/rings.png" alt="DigiRings" />
               </div>
             </div>
           </Fade>
@@ -362,7 +362,7 @@ export default withStyles(({ color }) => ({
     }
   },
   digiring_image: {
-    width: "700px",
+    width: "625px",
     "@media (max-width: 1200px)": {
       width: "600px",
     },
