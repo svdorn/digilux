@@ -363,7 +363,7 @@ export default withStyles(({ color }) => ({
     }
   },
   digiring_image: {
-    width: "625px",
+    width: "600px",
     "@media (max-width: 1200px)": {
       width: "600px",
     },
