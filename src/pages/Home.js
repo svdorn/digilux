@@ -41,8 +41,11 @@ class Home extends React.Component {
         <section {...css(styles.intro)}>
           <Fade duration={1500} bottom cascade>
             <div {...css(styles.intro_text)}>
-              <h1>DIGILUX</h1>
-              <i><h3 {...css(styles.intro_text_h3)}>Jewelry of the Metaverse</h3></i>
+            <img 
+                {...css(styles.intro_logo)} 
+                src="/images/Digilux_White_logo.png"
+                alt="Digilux"
+              />
               <p {...css(styles.intro_text_p)}>
                 Digilux is the first digital jewelry brand of the metaverse. 
                 We provide time-honed {"&"} expertise-driven accessories as NFTs available to mint. 
@@ -103,7 +106,7 @@ class Home extends React.Component {
         </section>
         <section id="roadmap" {...css(styles.roadmap)}>
           <Fade top>
-            <h1 {...css(styles.roadmap_header)}>Roadmap</h1>
+            <h1 {...css(styles.header)}>Roadmap</h1>
             <p {...css(styles.roadmap_sub_header)}>Digilux is devoted to our community's success. 
               To ensure that success, we'll provide opportunities for you to take part in our future collections, conversations, and exclusive events.</p>
             <div {...css(styles.roadmap_container)}>
@@ -183,10 +186,11 @@ export default withStyles(({ color }) => ({
   intro: {
     backgroundColor: color.primary,
     color: color.secondary,
-    height: "calc(50vh)",
-    minHeight: "560px",
+    height: "calc(60vh)",
+    minHeight: "600px",
     paddingTop: "80px",
     verticalAlign: "middle",
+    textAlign: "center",
     "@media (max-width: 1000px)": {
       height: "600px",
     },
@@ -194,9 +198,18 @@ export default withStyles(({ color }) => ({
       height: "450px",
     }
   },
+  intro_logo: {
+    height: "160px",
+    margin: "40px auto 0 auto",
+    display: "block",
+    "@media (max-width: 1000px)": {
+      height: "120px"
+    },
+    "@media (max-width: 500px)": {
+      height: "100px"
+    }
+  },
   intro_text: {
-    fontWeight: "800px",
-    fontSize: "32px",
     margin: "-30px auto",
     maxWidth: "95%",
     "@media (max-width: 1000px)": {
@@ -206,22 +219,12 @@ export default withStyles(({ color }) => ({
       fontSize: "26px"
     }
   },
-  intro_text_h3: {
-    fontSize: "26px",
-    marginTop: "-30px",
-    "@media (max-width: 1000px)": {
-      fontSize: "24px"
-    },
-    "@media (max-width: 500px)": {
-      fontSize: "22px"
-    }
-  },
   intro_text_p: {
     fontWeight: "300px",
     fontSize: "24px",
     textAlign: "center",
     maxWidth: "800px",
-    margin: "auto",
+    margin: "30px auto 0 auto",
     padding: "0 0 30px 0",
     "@media (max-width: 1000px)": {
       fontSize: "22px"
