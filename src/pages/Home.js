@@ -199,7 +199,7 @@ export default withStyles(({ color }) => ({
     }
   },
   intro_logo: {
-    height: "160px",
+    height: "150px",
     margin: "40px auto 0 auto",
     display: "block",
     "@media (max-width: 1000px)": {
