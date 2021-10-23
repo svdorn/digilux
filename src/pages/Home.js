@@ -5,15 +5,15 @@ import { Button } from "@material-ui/core";
 import Fade from 'react-reveal/Fade';
 
 const roadmapItems = [
-  { percentage: "10%", text: "The public DigiRing mint date is TBA. The whitelist mint will take place before the public mint. 200 randomly generated DigiRings will be reserved for marketing purposes and team distribution." },
-  { percentage: "20%", text: "After all 10,000 rings are minted, we will randomly select one DigiRing holder to win a designer brand ring of their choosing, with a cap cost of $10,000. You also get direct access to our jewelry guru to help you pick out your ring." },
-  { percentage: "40%", text: "To jump-start our community growth, we’re going to set up a $30,000 Community Fund dedicated to rewarding members for content creation, increased utility for Digilux NFTs, and other efforts that could receive funds from the Digilux team. We also will perpetually fill the Community Fund with 2.5% of OpenSea sales." },
-  { percentage: "50%", text: "Digilux will release The Showroom - an interactive experience on the Digilux site. Each ring will have their unique story displayed in the showroom for DigiRing holders to appreciate. Moreover, we will release the Digilux Storefront, where you can get custom jewelry inspired by your favorite Digilux NFTs." },
-  { percentage: "70%", text: "After the success of the DigiRing collection, we will move to the public mint of the DigiWatch collection. DigiRing holders will be whitelisted for the drop." },
-  { percentage: "80%", text: "After all 10,000 watches are minted, we will randomly select one DigiWatch holder to win a designer brand watch of their choosing, with a cap cost of $50,000. You also get direct access to our jewelry guru to help you pick out your watch." },
-  { percentage: "90%", text: "After the success of the DigiWatch collection, we will move to the public mint of the DigiNecklace collection. DigiWatch holders will be whitelisted for the drop." },
-  { percentage: "100%", text: "After all 10,000 necklaces are minted, we will randomly select one DigiNecklace holder to win a designer necklace of their choosing, with a cap cost of $20,000. You also get direct access to our jewelry guru to help you pick out your necklace." },
-  { percentage: "...", text: "Our continual missions are to take the collections to the Metaverses of the world. We intend to create special event mints for Digilux holders. Above all, we want to learn what our community members would like to see in the long term. There’s no brighter future than one where we all shine." }
+  { percentage: "10%", text: "The first public DigiRing mint TBA." },
+  { percentage: "20%", text: "After 10k rings are minted, a DigiRing holder will be randomly selected to win a free ring of their choice. Cost of this ring caps at $10k. Winner gets direct access to our Diamond Council of America certified jewelry expert to find the perfect ring for you." },
+  { percentage: "40%", text: "A $30,000 Community Fund will launch to reward content creation, increase Digilux NFT utility, and spark community growth. 2.5 percent of OpenSea sales will go to this fund." },
+  { percentage: "50%", text: "We’re launching two very cool parts of our site: The Showroom and The Storefront. The Showroom will display each ring, their history. The Storefront will allow you to get custom jewelry inspired by your favorite Digilux NFTs." },
+  { percentage: "70%", text: "DigiRing holders will be whitelisted for our next drop - the DigiWatch. The DigiWatch collection mint will happen shortly after the whitelisting." },
+  { percentage: "80%", text: "After 10k watches are minted, a DigiWatch holder will be randomly selected to win a free ring of their choice. Cost of this watch caps at $50k. Winner will get direct access to our jewelry guru to help pick out a watch." },
+  { percentage: "90%", text: "After the success of DigiWatch collection, we’ll move on to our DigiNecklace collection. DigiWatch holders will be whitelisted." },
+  { percentage: "100%", text: "After 10k necklaces are minted, a randomly selected DigiNecklace holder will win a designer necklace of their choosing, with a cap cost of $20,000. They’ll get direct access to our jewelry guru to help you pick a necklace." },
+  { percentage: "...", text: "We won’t stop still Digilux is apart of all the metaverses out there. In the meantime, there will be plenty of special event mints, Q&A/AMA discussions, and collaborations to look forward too." }
 ];
 
 const teamMembers = [
@@ -41,7 +41,7 @@ class Home extends React.Component {
           <Fade duration={1500} bottom cascade>
             <div {...css(styles.intro_text)}>
               <h1>DIGILUX</h1>
-              <i><h3 {...css(styles.intro_text_h3)}>Where Luxury meets Future.</h3></i>
+              <i><h3 {...css(styles.intro_text_h3)}>Jewelry of the Metaverse</h3></i>
               <p {...css(styles.intro_text_p)}>
                 Digilux is the first digital jewelry brand of the metaverse. 
                 We provide time-honed {"&"} expertise-driven accessories as NFTs available to mint. 
@@ -75,7 +75,7 @@ class Home extends React.Component {
             <div {...css(styles.mission_right)}>
               <img 
                 {...css(styles.mission_img)} 
-                src="/images/black_logo_green.png"
+                src="/images/logo_black.png"
                 alt="Digilux"
               />
             </div>
@@ -95,7 +95,7 @@ class Home extends React.Component {
                 </Fade>
               </div>
               <div {...css(styles.digiring_right)}>
-                <img {...css(styles.digiring_image)} src="/images/five_rings.png" alt="DigiRings" />
+                <img {...css(styles.digiring_image)} src="/images/rings.png" alt="DigiRings" />
               </div>
             </div>
           </Fade>
@@ -123,7 +123,7 @@ class Home extends React.Component {
         <section id="mint" {...css(styles.mint)}>
             <Fade top>
               <h1 {...css(styles.mint_header)}>Minting</h1>
-              <p {...css(styles.mint_sub_header)}>Every major collection from Digilux will include 10,000 items. Mint prices will be 0.065 ETH.
+              <p {...css(styles.mint_sub_header)}>Every major collection from Digilux will include 10,000 items. Mint prices will be 0.07 ETH.
               <br/><br/>All DigiRings will be revealed once minting is complete.
               </p>
               <div {...css(styles.mint_schedule)}>
@@ -362,7 +362,7 @@ export default withStyles(({ color }) => ({
     }
   },
   digiring_image: {
-    width: "700px",
+    width: "625px",
     "@media (max-width: 1200px)": {
       width: "600px",
     },
@@ -419,8 +419,8 @@ export default withStyles(({ color }) => ({
     }
   },
   roadmap_dot: {
-    height: "80px",
-    width: "80px",
+    height: "70px",
+    width: "70px",
     display: "inline-block",
     backgroundColor: color.gold,
     borderRadius: "50%",
@@ -436,10 +436,10 @@ export default withStyles(({ color }) => ({
   },
   roadmap_dot_text: {
     color: color.primary,
-    fontSize: "26px",
-    margin: "22px auto",
+    fontSize: "24px",
+    margin: "20px auto",
     "@media (max-width: 1000px)": {
-      fontSize: "24px",
+      fontSize: "22px",
       margin: "16px auto"
     },
     "@media (max-width: 500px)": {
